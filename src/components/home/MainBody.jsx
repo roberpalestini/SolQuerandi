@@ -20,9 +20,9 @@ const MainBody = React.forwardRef(
           <h1 ref={ref} className="display-1">
             {title}
           </h1>
-          <Typist>
+          <Typist typingDelay={40}>
             <div className="lead typist">
-              {message}
+             <h3>{message}</h3> 
             </div>
           </Typist>
           <div className="p-5">

@@ -8,7 +8,8 @@ import {
   leadership,
   skills,
   getInTouch,
-  experiences
+  experiences,
+  blog
 } from "./editable-stuff/config.js";
 import MainBody from "./components/home/MainBody";
 import AboutMe from "./components/home/AboutMe";
@@ -16,12 +17,15 @@ import Project from "./components/home/Project";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Skills from "./components/home/Skills";
-// import { Blog } from "./components/blog/Blog";
-// import BlogPost from "./components/blog/BlogPost";
+import { Blog } from "./components/blog/Blog";
+import BlogPost from "./components/blog/BlogPost";
 import GetInTouch from "./components/home/GetInTouch.jsx";
 import Leadership from "./components/home/Leadership.jsx";
 
 import Experience from "./components/home/Experience";
+import Sarah from "./components/sarah/index.jsx";
+import Antu from "./components/antu/index.jsx";
+import Cuyen from "./components/cuyen/index.jsx";
 
 const Home = React.forwardRef((props, ref) => {
   return (
@@ -33,6 +37,22 @@ const Home = React.forwardRef((props, ref) => {
         icons={mainBody.icons}
         ref={ref}
       />
+       {leadership.show && (
+        <Leadership
+          heading={leadership.heading}
+          message={leadership.message}
+          img={leadership.images}
+          imageSize={leadership.imageSize}
+        />
+      )}
+
+{getInTouch.show && (
+          <GetInTouch
+            heading={getInTouch.heading}
+            message={getInTouch.message}
+            email={getInTouch.email}
+          />
+        )}
       {about.show && (
         <AboutMe
           heading={about.heading}
@@ -42,11 +62,7 @@ const Home = React.forwardRef((props, ref) => {
           resume={about.resume}
         />
       )}
-      {
-        experiences.show && (
-          <Experience experiences={experiences}/>
-        )
-      }
+      
       {repos.show && (
         <Project
           heading={repos.heading}
@@ -55,14 +71,9 @@ const Home = React.forwardRef((props, ref) => {
           specfic={repos.specificRepos}
         />
       )}
-      {leadership.show && (
-        <Leadership
-          heading={leadership.heading}
-          message={leadership.message}
-          img={leadership.images}
-          imageSize={leadership.imageSize}
-        />
-      )}
+     
+    
+
       {skills.show && (
         <Skills
           heading={skills.heading}
@@ -70,6 +81,11 @@ const Home = React.forwardRef((props, ref) => {
           softSkills={skills.softSkills}
         />
       )}
+      {
+        experiences.show && (
+          <Experience experiences={experiences}/>
+        )
+      }
       
     </>
   );
@@ -80,20 +96,17 @@ const App = () => {
 
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL + "/"}>
-      {navBar.show && <Navbar ref={titleRef} />}
+      {navBar.show && <Navbar logo={navBar.logo} ref={titleRef} />}
       <Routes>
         <Route path="/" exact element={<Home ref={titleRef} />} />
+        <Route path={"/Antu"} element={<Antu ref={titleRef} />} />
+        <Route path={process.env.PUBLIC_URL + "/Cuyen"} component={Cuyen} />
+        <Route path={process.env.PUBLIC_URL + "/Sarah"}  component={Sarah} />
+      {blog.show && <Route path="/blog" exact component={Blog} />}
       </Routes>
-      {/* {false && <Route path="/blog" exact component={Blog} />}
-      {false && <Route path="/blog/:id" component={BlogPost} />} */}
+      {/* {blog.show && <Route path="/blog/:id" component={BlogPost} />} */}
       <Footer>
-        {getInTouch.show && (
-          <GetInTouch
-            heading={getInTouch.heading}
-            message={getInTouch.message}
-            email={getInTouch.email}
-          />
-        )}
+       
       </Footer>
     </BrowserRouter>
   );

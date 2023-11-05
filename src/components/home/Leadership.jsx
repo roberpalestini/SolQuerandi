@@ -6,15 +6,16 @@ const Leadership = ({ heading, message, img, imageSize }) => {
   return (
     <Jumbotron
       id="leadership"
-      className="m-0"
-      style={{ backgroundColor: "white" }}
+      className="bg-light m-0"
+      
     >
       <h2 className="display-4 pb-5 text-center">{heading}</h2>
       <div className="row">
-        <div className="col-md-5">
-          <p className="lead">{message}</p>
+        <div className="col-md-6">
+          <p className="lead" style={{whiteSpace: 'break-spaces', verticalAlign: 'bottom'}}>{message}</p>
+      
         </div>
-        <div className="col-md-7">
+        <div className="col-md-6">
           <Carousel>
             {img.map((value, index) => {
               return (
