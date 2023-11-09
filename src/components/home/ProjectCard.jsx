@@ -4,6 +4,15 @@ import Card from "react-bootstrap/Card";
 import Skeleton from "react-loading-skeleton";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { MDBIcon, MDBListGroup, MDBListGroupItem,
+   MDBCard,
+  MDBCardHeader,
+  MDBCardBody,
+  MDBCardTitle,
+  MDBCardText,
+  MDBCardFooter,
+  MDBBtn,
+  MDBCardImage} from 'mdb-react-ui-kit';
 
 const ProjectCard = ({ value }) => {
   const {
@@ -17,31 +26,50 @@ const ProjectCard = ({ value }) => {
   return (
     <Col md={4}>
      
-      
-      <Card className="card shadow-lg p-3 mb-5 bg-white rounded">
-        <Card.Body>
-        <Link to={`/${name}`}> 
-          <Card.Title  as="h5">{name || <Skeleton />} </Card.Title>
-          </Link>
-          <Card.Text>{(!description) ? "" : description || <Skeleton count={3} />} </Card.Text>
-          <img
-          className="d-block w-100"
-          src={img}
-          // alt="First slide"
-          // width={'80vw'}
-          // height={'80vh'}
-        />
+     <MDBCard >
+          <MDBCardImage
+            src={img}
+            alt='...'
+            position='top'
+          />
+          <MDBCardBody>
+            <MDBCardTitle>{name}</MDBCardTitle>
+            <MDBListGroupItem className='d-flex justify-content-between align-items-center'>
+          <div className='d-flex align-items-center'>
 
-          <hr />
+          <MDBIcon fas icon="car" className='rounded-circle'/>
+            <div className='ms-3'>
+              <p className='text-muted mb-0'>Parking</p>
+            </div>
+          </div>
+        </MDBListGroupItem>
+        <MDBListGroupItem className='d-flex justify-content-between align-items-center'>
+          <div className='d-flex align-items-center'>
+
+          <MDBIcon fas icon="bed" className='rounded-circle' />
+            <div className='ms-3'>
+              <p className='text-muted mb-0'>4/5 Personas</p>
+            </div>
+          </div>
+        </MDBListGroupItem>
+        <MDBListGroupItem className='d-flex justify-content-between align-items-center'>
+          <div className='d-flex align-items-center'>
+          <MDBIcon fas icon="umbrella-beach" className='rounded-circle' />
+            <div className='ms-3'>
+              <p className='text-muted mb-0'>Jardin y Parrilla</p>
+            </div>
+          </div>
+        </MDBListGroupItem>
+          </MDBCardBody>
+          <MDBCardFooter>
          
-          {value ? (
-            <CardFooter star_count={stargazers_count} pushed_at={pushed_at} />
-          ) : (
-            <Skeleton />
-          )}
-        </Card.Body>
-      </Card>
-    
+          <MDBBtn style={{ backgroundColor: '#55acee' }}  href={process.env.PUBLIC_URL + `/${name}`}>
+      Conocer Mas
+    </MDBBtn>
+      
+
+          </MDBCardFooter>
+        </MDBCard>
     </Col>
   );
 };

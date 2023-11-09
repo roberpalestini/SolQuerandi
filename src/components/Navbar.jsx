@@ -10,25 +10,26 @@ const Navigation = React.forwardRef((props, ref) => {
   const [isTop, setIsTop] = useState(true);
   const [scrollPosition, setScrollPosition] = useState(0);
   const navbarMenuRef = React.useRef();
-  const navbarDimensions = useResizeObserver(navbarMenuRef || null);
-  const navBottom = navbarDimensions ? navbarDimensions.bottom : 0;
-  useScrollPosition(
-    ({ prevPos, currPos }) => {
-      if (!navbarDimensions || !navbarMenuRef) return;
-      currPos.y + ref.current.offsetTop - navbarDimensions.bottom > 5
-        ? setIsTop(true)
-        : setIsTop(false);
-      setScrollPosition(currPos.y);
-    },
-    [navBottom]
-  );
+  // const navbarDimensions = (ref.current.offsetTop || navbarMenuRef) ? null : useResizeObserver(navbarMenuRef);
+  // const navBottom = navbarDimensions ? navbarDimensions.bottom : 0;
 
-  React.useEffect(() => {
-    if (!navbarDimensions || !navbarMenuRef) return;
-    navBottom - scrollPosition >= ref.current.offsetTop
-      ? setIsTop(false)
-      : setIsTop(true);
-  }, [navBottom, navbarDimensions, ref, scrollPosition]);
+  // useScrollPosition(
+  //   ({ prevPos, currPos }) => {
+  //     if (!navbarDimensions || !navbarMenuRef || !ref.current.offsetTop) return;
+  //     currPos.y + (ref.current.offsetTop != null ? ref.current.offsetTop : 0 )- navbarDimensions.bottom > 5
+  //       ? setIsTop(true)
+  //       : setIsTop(false);
+  //     setScrollPosition(currPos.y);
+  //   },
+  //   [navBottom]
+  // );
+
+  // React.useEffect(() => {
+  //   if (!navbarDimensions || !navbarMenuRef) return;
+  //   navBottom - scrollPosition >= (ref.current.offsetTop != null ? ref.current.offsetTop : 0 )
+  //     ? setIsTop(false)
+  //     : setIsTop(true);
+  // }, [navbarDimensions, scrollPosition]);
 
   return (
     <Navbar

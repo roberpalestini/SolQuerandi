@@ -9,9 +9,11 @@ import {
   skills,
   getInTouch,
   experiences,
-  blog
+  blog,
+  antuSlider,
+  cuyenSlider
 } from "./editable-stuff/config.js";
-import MainBody from "./components/home/MainBody";
+import MainBody from "./components/home/MainBody"; 
 import AboutMe from "./components/home/AboutMe";
 import Project from "./components/home/Project";
 import Footer from "./components/Footer";
@@ -99,9 +101,9 @@ const App = () => {
       {navBar.show && <Navbar logo={navBar.logo} ref={titleRef} />}
       <Routes>
         <Route path="/" exact element={<Home ref={titleRef} />} />
-        <Route path={"/Antu"} element={<Antu ref={titleRef} />} />
-        <Route path={process.env.PUBLIC_URL + "/Cuyen"} component={Cuyen} />
-        <Route path={process.env.PUBLIC_URL + "/Sarah"}  component={Sarah} />
+        <Route path={"/Antu"} element={<Antu ref={titleRef} img={antuSlider} />} />
+        <Route path={"/Cuyen"} element={<Cuyen ref={titleRef} img={cuyenSlider} />} />
+        <Route path={"/Sarah"} element={<Sarah ref={titleRef} img={antuSlider} />} />
       {blog.show && <Route path="/blog" exact component={Blog} />}
       </Routes>
       {/* {blog.show && <Route path="/blog/:id" component={BlogPost} />} */}

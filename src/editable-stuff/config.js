@@ -4,6 +4,151 @@ const navBar = {
   logo: require("../assets/img/typologo_solquerandi.png"),
 };
 
+const antuSlider = {
+  images: [
+    { 
+      img: require('../assets/img/antu/ANTÚ Suite 3.jpeg'),
+      // label: "BOOKING AWARD", 
+      // paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum." 
+    },
+    { 
+      img: require('../assets/img/antu/ANTÚ Suite 4.jpg'),
+      // label: "BOOKING AWARD", 
+      // paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum." 
+    },
+ 
+    { 
+      img: require('../assets/img/antu/ANTÚ Cocina 1.jpeg'),
+      // label: "BOOKING AWARD", 
+      // paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum." 
+    },
+    { 
+      img: require('../assets/img/antu/ANTÚ Comedor 1.jpeg'),
+      // label: "BOOKING AWARD", 
+      // paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum." 
+    },
+
+  ],
+  imagesTwo: [
+    { 
+      img: require('../assets/img/antu/Antu5.jpg'),
+      // label: "GOOGLE COMENTARIOS", 
+      // paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum." 
+    },
+    { 
+      img: require('../assets/img/antu/Antu6.jpg'),
+      // label: "GOOGLE COMENTARIOS", 
+      // paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum." 
+    },
+    { 
+      img: require('../assets/img/antu/Antu7.jpg'),
+      // label: "GOOGLE COMENTARIOS", 
+      // paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum." 
+    },
+    { 
+      img: require('../assets/img/antu/Antu1.jpg'),
+      // label: "GOOGLE COMENTARIOS", 
+      // paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum." 
+    },
+    { 
+      img: require('../assets/img/antu/Antu2.jpg'),
+      // label: "GOOGLE COMENTARIOS", 
+      // paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum." 
+    },
+    { 
+      img: require('../assets/img/antu/Antu3.jpg'),
+      // label: "GOOGLE COMENTARIOS", 
+      // paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum." 
+    },
+    { 
+      img: require('../assets/img/antu/Antu4.jpg'),
+      // label: "GOOGLE COMENTARIOS", 
+      // paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum." 
+    },
+  ],
+};
+
+
+
+const cuyenSlider = {
+  images: [
+    { 
+      img: require('../assets/img/antu/ANTÚ Suite 3.jpeg'),
+      // label: "BOOKING AWARD", 
+      // paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum." 
+    },
+    { 
+      img: require('../assets/img/antu/ANTÚ Suite 4.jpg'),
+      // label: "BOOKING AWARD", 
+      // paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum." 
+    },
+ 
+    { 
+      img: require('../assets/img/antu/ANTÚ Cocina 1.jpeg'),
+      // label: "BOOKING AWARD", 
+      // paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum." 
+    },
+    { 
+      img: require('../assets/img/antu/ANTÚ Comedor 1.jpeg'),
+      // label: "BOOKING AWARD", 
+      // paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum." 
+    },
+
+  ],
+  imagesTwo: [
+    { 
+      img: require('../assets/img/cuyen/Cuyen1.jpg'),
+      // label: "BOOKING AWARD", 
+      // paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum." 
+    },
+    { 
+      img: require('../assets/img/cuyen/Cuyen2.jpg'),
+      // label: "BOOKING AWARD", 
+      // paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum." 
+    },
+    { 
+      img: require('../assets/img/cuyen/Cuyen3.jpg'),
+      // label: "BOOKING AWARD", 
+      // paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum." 
+    },
+    { 
+      img: require('../assets/img/cuyen/Cuyen4.jpg'),
+      // label: "BOOKING AWARD", 
+      // paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum." 
+    },
+    { 
+      img: require('../assets/img/cuyen/Cuyen5.jpg'),
+      // label: "BOOKING AWARD", 
+      // paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum." 
+    },
+    { 
+      img: require('../assets/img/cuyen/Cuyen6.jpg'),
+      // label: "BOOKING AWARD", 
+      // paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum." 
+    },
+    { 
+      img: require('../assets/img/cuyen/Cuyen7.jpg'),
+      // label: "BOOKING AWARD", 
+      // paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum." 
+    },
+    { 
+      img: require('../assets/img/cuyen/Cuyen8.jpg'),
+      // label: "BOOKING AWARD", 
+      // paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum." 
+    },
+    { 
+      img: require('../assets/img/cuyen/Cuyen9.jpg'),
+      // label: "BOOKING AWARD", 
+      // paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum." 
+    },
+    { 
+      img: require('../assets/img/cuyen/Cuyen10.jpg'),
+      // label: "BOOKING AWARD", 
+      // paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum." 
+    },
+  ],
+};
+
 // Main Body SECTION
 const mainBody = {
   gradientColors: "#4484ce, #1ad7c0, #ff9b11, #9b59b6, #ff7f7f, #ecf0f1",
@@ -101,26 +246,26 @@ const leadership = {
 // SKILLS SECTION
 const skills = {
   show: true,
-  heading: "Skills",
+  heading: "¿Qué ofrece este lugar?",
   hardSkills: [
-    { name: "Python", value: 90 },
-    { name: "SQL", value: 75 },
-    { name: "Data Structures", value: 85 },
-    { name: "C/C++", value: 65 },
-    { name: "JavaScript", value: 90 },
-    { name: "React", value: 65 },
-    { name: "HTML/CSS", value: 55 },
-    { name: "C#", value: 80 },
+    { name: "Vista a la playa", value: 90 },
+    { name: "Vista al mar", value: 75 },
+    { name: "Vista al valle", value: 85 },
+    { name: "Patio o balcón privada", value: 65 },
+    { name: "Parrilla", value: 90 },
+    { name: "Frente a la costa", value: 65 },
+    { name: "Cocina y comedor", value: 55 },
+    { name: "Wifi", value: 80 },
+    { name: "Extintor de incendios", value: 80 },
+    { name: "Calefacción", value: 90 },
+    { name: "Ventilador de techo", value: 75 },
+    { name: "Televisión HD de 32 pulgadas con Cable estándar, Netflix", value: 85 },
   ],
   softSkills: [
-    { name: "Goal-Oriented", value: 80 },
-    { name: "Collaboration", value: 90 },
-    { name: "Positivity", value: 75 },
-    { name: "Adaptability", value: 85 },
-    { name: "Problem Solving", value: 75 },
-    { name: "Empathy", value: 90 },
-    { name: "Organization", value: 70 },
-    { name: "Creativity", value: 90 },
+    { name: "Se permiten mascotas", value: 90 },
+    { name: "Disponible para estadías largas", value: 75 },
+    { name: "Check-in sin restricción de horario", value: 85 },
+    { name: "Limpieza disponible durante la estadía", value: 65 },
   ],
 };
 
@@ -136,7 +281,7 @@ const getInTouch = {
 };
 
 const experiences = {
-  show: true,
+  show: false,
   heading: "Experiences",
   data: [
     {
@@ -157,4 +302,4 @@ const blog = {
   show: true,
 };
 
-export { navBar, mainBody, about, repos, skills, leadership, getInTouch, experiences, blog };
+export { antuSlider, cuyenSlider, navBar, mainBody, about, repos, skills, leadership, getInTouch, experiences, blog };
